@@ -28,9 +28,9 @@ export default function Navbar() {
 
     return (
         <nav className="container mx-auto">
-            <div className="relative px-4 py-4 flex justify-between items-center">
+            <div className="relative px-4 py-8 flex justify-between items-center">
                 <a className="text-3xl font-bold leading-none flex group" href="#">
-                    <span className="text-white group-hover:text-green transition duration-300">ZAI</span>
+                    <span className="text-white group-hover:text-green transition duration-300 font-semibold">ZAI</span>
                     <span className="text-green group-hover:text-white transition duration-300">NAB</span>
                 </a>
 
@@ -42,11 +42,11 @@ export default function Navbar() {
                         <FaBars className="block h-6 w-6 text-current" />
                     </button>
                 </div>
-                <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
                     {["Home", "About", "Services +", "Contact"].map((item) => (
                         <li key={item}>
                             <a
-                                className={`text-sm transition duration-300 px-4 py-2 ${activeItem === item
+                                className={`transition duration-300 px-4 py-2 text-base poppins-medium ${activeItem === item
                                     ? "text-green border-b-4 border-green"
                                     : "text-white border-b-4 border-transparent hover:text-green hover:border-green"
                                     }`}
@@ -59,7 +59,7 @@ export default function Navbar() {
                     ))}
                 </ul>
                 <a
-                    className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-green hover:bg-white hover:text-green text-sm text-white font-bold rounded transition duration-300"
+                    className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-green hover:bg-white hover:text-green text-white rounded transition duration-300 text-base poppins-medium"
                     href="#"
                 >
                     Download CV
@@ -105,7 +105,7 @@ export default function Navbar() {
                             {["Home", "About", "Services +", "Contact"].map((item) => (
                                 <li className="mb-1" key={item}>
                                     <a
-                                        className={`block p-4 text-sm font-semibold rounded transition duration-300 ${activeItem === item
+                                        className={`block p-4 text-base poppins-medium rounded transition duration-300 ${activeItem === item
                                             ? "bg-green text-white"
                                             : "text-white hover:bg-green hover:text-white"
                                             }`}
@@ -119,7 +119,7 @@ export default function Navbar() {
                         </ul>
                     </div>
                     <a
-                        className="absolute bottom-6 left-6 py-2 px-6 bg-green hover:bg-white hover:text-green text-sm text-white font-bold rounded transition duration-300"
+                        className="absolute bottom-6 left-6 py-2 px-6 bg-green hover:bg-white hover:text-green text-white rounded transition duration-300 text-base poppins-medium"
                         href="#"
                     >
                         Download CV

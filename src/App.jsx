@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.css'
-import Navbar from './pages/layout/navbar'
+import SPA from './pages/SPA'
 
 function App() {
 
   return (
     <>
-      <Navbar />
+      <SPA />
     </>
   )
 }
