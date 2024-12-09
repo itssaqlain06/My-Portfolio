@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
-import HoverImage from '/assets/hover-shadow-2.png'
 
 export default function Navbar() {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -43,26 +42,19 @@ export default function Navbar() {
                         <FaBars className="block h-6 w-6 text-current" />
                     </button>
                 </div>
-                <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 border border-[#45A83E] rounded-[50px] p-3 overflow-hidden">
+                <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 border border-[#45A83E] rounded-full p-1 whitespace-nowrap">
                     {["Home", "About", "Portfolio", "Services", "Let's Talk"].map((item) => (
-                        <li key={item} className="relative flex flex-col items-center">
+                        <li key={item} className="flex">
                             <a
-                                className={`transition duration-300 px-4 text-base poppins-medium ${activeItem === item
+                                className={`transition duration-300 px-4 py-2 text-base poppins-medium ${activeItem === item
                                     ? "text-green border-green font-bold"
                                     : "text-white border-transparent hover:text-green hover:border-green"
-                                    }`}
+                                    } whitespace-nowrap`}
                                 href="#"
                                 onClick={() => handleMenuClick(item)}
                             >
                                 {item}
                             </a>
-                            {activeItem === item && (
-                                <img
-                                    src={HoverImage}
-                                    alt="Active Tab Indicator"
-                                    className="absolute transform top-[-25px] opacity-50"
-                                />
-                            )}
                         </li>
                     ))}
                 </ul>
