@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
+import HoverImage from '/assets/hover-shadow-2.png'
 
 export default function Navbar() {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -30,8 +31,8 @@ export default function Navbar() {
         <nav className="container mx-auto">
             <div className="relative px-4 py-8 flex justify-between items-center">
                 <a className="text-3xl font-bold leading-none flex group" href="#">
-                    <span className="text-white group-hover:text-green transition duration-300 font-semibold">ZAI</span>
-                    <span className="text-green group-hover:text-white transition duration-300">NAB</span>
+                    <span className="text-white group-hover:text-green transition duration-300 font-semibold">Pi</span>
+                    <span className="text-green group-hover:text-white transition duration-300">xels</span>
                 </a>
 
                 <div className="lg:hidden">
@@ -42,26 +43,32 @@ export default function Navbar() {
                         <FaBars className="block h-6 w-6 text-current" />
                     </button>
                 </div>
-                <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
-                    {["Home", "About", "Services +", "Contact"].map((item) => (
-                        <li key={item}>
+                <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6 border border-[#45A83E] rounded-[50px] p-3 overflow-hidden">
+                    {["Home", "About", "Portfolio", "Services", "Let's Talk"].map((item) => (
+                        <li key={item} className="relative flex flex-col items-center">
                             <a
-                                className={`transition duration-300 px-4 py-2 text-base poppins-medium ${activeItem === item
-                                    ? "text-green border-b-4 border-green"
-                                    : "text-white border-b-4 border-transparent hover:text-green hover:border-green"
+                                className={`transition duration-300 px-4 text-base poppins-medium ${activeItem === item
+                                    ? "text-green border-green font-bold"
+                                    : "text-white border-transparent hover:text-green hover:border-green"
                                     }`}
                                 href="#"
                                 onClick={() => handleMenuClick(item)}
                             >
                                 {item}
                             </a>
+                            {activeItem === item && (
+                                <img
+                                    src={HoverImage}
+                                    alt="Active Tab Indicator"
+                                    className="absolute transform top-[-25px] opacity-50"
+                                />
+                            )}
                         </li>
                     ))}
                 </ul>
-                <a
-                    className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-green hover:bg-white hover:text-green text-white rounded transition duration-300 text-base poppins-medium"
-                    href="#"
-                >
+
+
+                <a className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-green hover:bg-white hover:text-green text-white rounded transition duration-300 text-base poppins-medium" href="#">
                     Download CV
                 </a>
             </div>
@@ -77,10 +84,10 @@ export default function Navbar() {
                     <div className="flex items-center mb-8">
                         <a className="mr-auto text-3xl font-bold leading-none group" href="#">
                             <span className="text-white group-hover:text-green transition duration-300">
-                                ZAI
+                                Pi
                             </span>
                             <span className="text-green group-hover:text-white transition duration-300">
-                                NAB
+                                xels
                             </span>
                         </a>
                         <button className="navbar-close" onClick={toggleMenu}>
@@ -102,7 +109,7 @@ export default function Navbar() {
                     </div>
                     <div>
                         <ul className="flex flex-col gap-2">
-                            {["Home", "About", "Services +", "Contact"].map((item) => (
+                            {["Home", "About", "Portfolio", "Services", "Let's Talk"].map((item) => (
                                 <li className="mb-1" key={item}>
                                     <a
                                         className={`block p-4 text-base poppins-medium rounded transition duration-300 ${activeItem === item
