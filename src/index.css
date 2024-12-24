@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .text-gradient {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(to right, #f50591, #3934f1, #2fafc7);
+  }
+
+  .gradient-icon {
+    background: linear-gradient(to right, #f50591, #3934f1, #2fafc7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Apply currentColor for SVG */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .gradient-icon-reverse {
+    background: linear-gradient(to right, #2fafc7, #3934f1, #f50591);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Apply currentColor for SVG */
+  }
+}

@@ -1,3 +1,15 @@
 #root {
-  background: #020202;
+  background: #100E18;
+}
+.original-surfer-regular {
+  font-family: "Original Surfer", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outfit-regular {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
