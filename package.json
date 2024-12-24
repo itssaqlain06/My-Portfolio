@@ -1,13 +1,21 @@
 {
-  "name": "portfolio",
+  "name": "MyPortfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+   "homepage": "https://itssaqlain06.github.io/My-Portfolio",
   "type": "module",
+  "author": {
+    "name": "Saqlain",
+    "email": "itssaqlain06@gmail.com",
+    "url": "https://www.linkedin.com/in/itssaqlain06/"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
