@@ -59,7 +59,6 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-
                 <a className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-green hover:bg-white hover:text-green text-white rounded transition duration-300 text-base poppins-medium" href="#">
                     Download CV
                 </a>
