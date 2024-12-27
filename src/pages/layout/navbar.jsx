@@ -5,7 +5,6 @@ export default function navbar() {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [activeItem, setActiveItem] = useState("Home");
 
-    // Toggle menu open/close
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
     };
@@ -14,15 +13,14 @@ export default function navbar() {
         setActiveItem(menu);
     };
 
-
     return (
         <nav className="container mx-auto">
             <div className="relative px-4 py-4 flex justify-between items-center">
                 <a className="" href="#">
-                    <span className='original-surfer-regular text-[40px] leading-8 text-gradient'>Pixels</span>
+                    <span className='surfer-regular text-[40px] leading-8 text-gradient'>Pixels</span>
                 </a>
                 <div className="lg:hidden">
-                    <button className="navbar-burger flex items-center text-white hover:text-pink transition duration-300 p-3" onClick={toggleMenu}>
+                    <button className="navbar-burger flex items-center text-white hover:text-pink focus:text-pink transition duration-300 p-3" onClick={toggleMenu}>
                         <FaBars className="block h-6 w-6 text-current" />
                     </button>
                 </div>
@@ -44,7 +42,7 @@ export default function navbar() {
                         ))}
                     </ul>
                     <a
-                        className="py-2 px-6 bg-gradient-to-r from-pink to-blue text-white font-bold rounded hover:opacity-90 transition duration-300"
+                        className="py-2 px-6 gradient-bg hover:gradient-bg-hover text-white font-bold rounded hover:opacity-90 transition duration-300 "
                         href="#"
                     >
                         Contact us
@@ -56,26 +54,34 @@ export default function navbar() {
                 <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-main border-r overflow-y-auto">
                     <div className="flex items-center mb-8">
                         <a className="mr-auto" href="#">
-                            <span className='original-surfer-regular text-[40px] leading-8 text-gradient'>Pixels</span>
+                            <span className='surfer-regular text-[40px] leading-8 text-gradient'>Pixels</span>
                         </a>
                         <button className="navbar-close" onClick={toggleMenu}>
-                            <svg className="h-6 w-6 text-white cursor-pointer hover:text-pink transition duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="h-6 w-6 text-white cursor-pointer hover:text-pink focus:text-pink transition duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </button>
                     </div>
-                    <div>
+                    <div className='relative'>
                         <ul>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-white hover:bg-pink hover:text-white transition duration-300 rounded" href="#">Home</a>
+                                <a className="block p-4 text-sm font-semibold text-white hover:bg-gradient-to-r from-pink to-blue transition duration-300 rounded" href="#">Home</a>
                             </li>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-white hover:bg-pink hover:text-white transition duration-300 rounded" href="#">About Us</a>
+                                <a className="block p-4 text-sm font-semibold text-white hover:bg-gradient-to-r from-pink to-blue transition duration-300 rounded" href="#">About Us</a>
                             </li>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-white hover:bg-pink hover:text-white transition duration-300 rounded" href="#">Projects</a>
+                                <a className="block p-4 text-sm font-semibold text-white hover:bg-gradient-to-r from-pink to-blue transition duration-300 rounded" href="#">Projects</a>
                             </li>
                         </ul>
+                    </div>
+                    <div className="absolute b-0">
+                        <a
+                            className="py-3 px-6 gradient-bg hover:gradient-bg-hover text-white font-bold rounded hover:opacity-90 transition duration-300"
+                            href="#"
+                        >
+                            Contact us
+                        </a>
                     </div>
                 </nav>
             </div>
