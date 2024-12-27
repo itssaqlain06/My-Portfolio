@@ -1,47 +1,55 @@
 import React from 'react';
-import { FaArrowDown } from "react-icons/fa";
 
-export default function HeroSection() {
+const HeroSection = () => {
     return (
-        <section className="container mx-auto">
-            <div className="flex px-5 py-10 md:flex-row flex-col items-center">
-                {/* Text Content */}
-                <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 className="text-[64px] font-semibold text-white">
-                        <span className='font-semibold'>Where</span> creativity meets <span className='font-semibold'>functionality</span>
-                    </h1>
-                    <p className="leading-relaxed text-2xl my-8 text-white w-[72%]">
-                        A passionate UI Designer dedicated to crafting visually stunning and user-friendly interfaces. With a focus on simplicity and functionality, I create designs that connect with users and elevate digital experiences.
-                    </p>
-
-                    <div className="flex justify-center items-center gap-3 ">
-                        <a className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-green hover:bg-white hover:text-green text-white rounded-full transition duration-300 text-base poppins-medium" href="#">
-                            What We Do
-                            <img src="/assets/circle-arrow.png" alt="Circle Arrow Image" className='inline ml-3' />
-                        </a>
-                        <div class="flex items-center justify-center">
-                            <div class="flex items-center justify-center bg-[#14452C] h-[70px] w-[70px] rounded-full hover:bg-white transition duration-300 group">
-                                <div class="flex items-center justify-center bg-gray-300 h-[45px] w-[45px] rounded-full hover:bg-[#14452C] transition duration-300">
-                                    <span class="relative">
-                                        <FaArrowDown class="cursor-pointer transition-all duration-500 transform group-hover:translate-y-2 group-hover:text-white hover:translate-y-2 text-[#14452C]" />
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
+        <div className="border-t-[1px] border-[#525252]">
+            <div className="container mx-auto px-6 md:px-12 lg:flex lg:items-center lg:justify-between text-white gap-4">
+                <div className="lg:w-1/2 flex justify-center">
+                    <div className="relative">
+                        <div className="absolute inset-0 w-full h-full bg-blue-500 rounded-xl transform -rotate-6 scale-105"></div>
+                        <img
+                            src="assets/hero-section-image.png"
+                            alt="Placeholder"
+                            className="relative w-[602px] h-[636px] rounded-lg"
+                        />
                     </div>
-
                 </div>
-
-                {/* Image Section */}
-                <div className="md:w-2/5">
-                    <img
-                        className="object-cover object-center rounded"
-                        alt="hero"
-                        src="https://dummyimage.com/495x593"
-                    />
+                <div className="lg:w-1/2 mt-10 lg:mt-0">
+                    <p className="text-lg tracking-[4px] leading-relaxed">
+                        WE ARE
+                    </p>
+                    <h1 className="text-[90px] leading-[96px] mb-6">
+                        <span>Creative</span> <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink to-blue">
+                            UI/UX Design
+                        </span>
+                        <br />
+                        <span>Professionals</span>
+                    </h1>
+                    <p className="text-md mb-5 leading-[25px] plus-jakarta-regular">
+                        Crafting seamless and visually stunning digital experiences tailored to your brand's unique identity. Elevate your presence with our expert UI/UX design solutions.
+                    </p>
+                    <button className="hover:bg-gradient-to-r from-pink to-blue gradient-button text-white px-8 py-3 rounded-full text-xl shadow-md mt-4 plus-jakarta-regular">
+                        View Portfolio
+                    </button>
                 </div>
             </div>
-        </section>
+            <div className="container mx-auto py-6 px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <h2 className="text-4xl font-bold">1.5K</h2>
+                    <p className="mt-2 text-gray-300">Happy Clients</p>
+                </div>
+                <div>
+                    <h2 className="text-4xl font-bold">100%</h2>
+                    <p className="mt-2 text-gray-300">Safety Privacy</p>
+                </div>
+                <div>
+                    <h2 className="text-4xl font-bold">990+</h2>
+                    <p className="mt-2 text-gray-300">Projects Completed</p>
+                </div>
+            </div>
+        </div>
     );
-}
+};
+
+export default HeroSection;

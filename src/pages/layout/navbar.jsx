@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaBars } from "react-icons/fa";
 
 export default function navbar() {
@@ -13,6 +13,20 @@ export default function navbar() {
         setActiveItem(menu);
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setMenuOpen(false);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
         <nav className="container mx-auto">
             <div className="relative px-4 py-4 flex justify-between items-center">
@@ -24,9 +38,9 @@ export default function navbar() {
                         <FaBars className="block h-6 w-6 text-current" />
                     </button>
                 </div>
-                <div className="hidden lg:flex lg:items-center lg:space-x-8">
+                <div className="hidden lg:flex lg:items-center lg:space-x-8 gap-4">
                     <ul className="flex space-x-8">
-                        {["Home", "About Us", "Projects"].map((item) => (
+                        {["Home", "About Us", "Projects", "Portfolio"].map((item) => (
                             <li key={item}>
                                 <a
                                     className={`text-xl font-medium transition duration-300 hover:text-pink px-4 py-2 ${activeItem === item
@@ -42,7 +56,7 @@ export default function navbar() {
                         ))}
                     </ul>
                     <a
-                        className="py-2 px-6 gradient-bg hover:gradient-bg-hover text-white font-bold rounded hover:opacity-90 transition duration-300 "
+                        className="py-2 px-6 text-white font-bold rounded hover:opacity-80 hover-gradient text-xl"
                         href="#"
                     >
                         Contact us
@@ -62,22 +76,25 @@ export default function navbar() {
                             </svg>
                         </button>
                     </div>
-                    <div className='relative'>
+                    <div className="flex-1">
                         <ul>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-white hover:bg-gradient-to-r from-pink to-blue transition duration-300 rounded" href="#">Home</a>
+                                <a className="block p-4 text-sm font-semibold text-white hover:gradient-bg focus:opacity-80 transition duration-300 rounded" href="#">Home</a>
                             </li>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-white hover:bg-gradient-to-r from-pink to-blue transition duration-300 rounded" href="#">About Us</a>
+                                <a className="block p-4 text-sm font-semibold text-white hover:gradient-bg focus:opacity-80 transition duration-300 rounded" href="#">About Us</a>
                             </li>
                             <li className="mb-1">
-                                <a className="block p-4 text-sm font-semibold text-white hover:bg-gradient-to-r from-pink to-blue transition duration-300 rounded" href="#">Projects</a>
+                                <a className="block p-4 text-sm font-semibold text-white hover:gradient-bg focus:opacity-80 transition duration-300 rounded" href="#">Projects</a>
+                            </li>
+                            <li className="mb-1">
+                                <a className="block p-4 text-sm font-semibold text-white hover:gradient-bg focus:opacity-80 transition duration-300 rounded" href="#">Portfolio</a>
                             </li>
                         </ul>
                     </div>
-                    <div className="absolute b-0">
+                    <div className="mt-auto">
                         <a
-                            className="py-3 px-6 gradient-bg hover:gradient-bg-hover text-white font-bold rounded hover:opacity-90 transition duration-300"
+                            className="py-3 text-center px-6 gradient-bg text-white font-bold rounded focus:opacity-80 transition duration-300 block"
                             href="#"
                         >
                             Contact us

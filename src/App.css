@@ -1,5 +1,6 @@
 #root {
-  background: #100E18;
+  background: #100e18;
+  font-family: "Outfit", serif;
 }
 .surfer-regular {
   font-family: "Original Surfer", serif;
@@ -12,4 +13,34 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+.plus-jakarta-regular {
+  font-family: "Plus Jakarta Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hover-gradient {
+  background: linear-gradient(to right, #f50591, #3934f1);
+  transition: background 0.3s ease;
+}
+
+.hover-gradient:hover {
+  background: linear-gradient(to right, #3934f1, f50591);
+}
+
+.gradient-button {
+  border-width: 2px;
+  border-top-color: #f50591;
+  border-right-color: #f50591;
+  border-bottom-color: #3934f1;
+  border-left-color: #3934f1;
+  transition: 0.3s all ease-in-out;
+}
+
+.gradient-button:hover {
+  border-width: 2px;
+  border-color: #fff;
 }
