@@ -56,7 +56,7 @@ export default function navbar() {
                         ))}
                     </ul>
                     <a
-                        className="py-2 px-6 text-white font-bold rounded hover:opacity-80 hover-gradient text-xl"
+                        className="py-2 px-6 text-white font-bold rounded hover:opacity-80 hover-gradient text-xl z-10"
                         href="#"
                     >
                         Contact us
