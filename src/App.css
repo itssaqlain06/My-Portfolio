@@ -44,3 +44,46 @@
   border-width: 2px;
   border-color: #fff;
 }
+
+.custom-gradient {
+  background: linear-gradient(
+    90deg,
+    #fb0182 0%,
+    #d21ce6 37%,
+    #2facf7 68%,
+    #519ffc 77%,
+    #3934f1 100%
+  );
+  overflow: hidden;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee 45s linear infinite;
+}
+
+.marquee-content {
+  display: inline-flex;
+}
+
+.marquee h2,
+.marquee img {
+  margin: 0 1rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(45%);
+  }
+  to {
+    transform: translateX(-110%);
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

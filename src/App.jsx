@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import SPA from './pages/SPA'
+import SPA from './components/SPA'
 
 function App() {
 

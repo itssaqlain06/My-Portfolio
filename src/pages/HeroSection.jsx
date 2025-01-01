@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
     return (
-        <div className="border-t-[1px] border-[#525252] relative">
+        <div className="border-t-[1px] border-[#525252] relative overflow-hidden">
             <img className="absolute top-[-200px] right-[-359px]" src="assets/gradient-1.png" alt="" />
             <div className="container mx-auto px-6 md:px-12 lg:flex lg:items-center lg:justify-between text-white gap-4">
                 <div className="lg:w-1/2 flex justify-center">
@@ -37,7 +37,7 @@ const HeroSection = () => {
                     </button>
                 </div>
             </div>
-            <div className="container mx-auto py-6 px-6 md:px-12 flex flex-wrap justify-center gap-8">
+            <div className="container mx-auto p-6 md:px-12 flex flex-wrap justify-center gap-8">
                 <div className="border border-1 rounded-xl text-white inline-flex items-center justify-center gap-4 p-4 h-28">
                     <div>
                         <h2 className="text-4xl font-bold">1.5K</h2>
@@ -102,6 +102,26 @@ const HeroSection = () => {
                             alt="Client 3"
                         />
                     </div>
+                </div>
+            </div>
+            <div className="relative h-24 custom-gradient flex items-center justify-around text-[50px] leading-[64px] text-white">
+                <div className="marquee">
+                    <h2>UI/UX DESIGN</h2>
+                    <img src="assets/side-by-side.png" alt="Icon" />
+                    <h2>WIREFRAMING/PROTOTYPING</h2>
+                    <img src="assets/side-by-side.png" alt="Icon" />
+                    <h2>WEB DESIGN</h2>
+                    <img src="assets/side-by-side.png" alt="Icon" />
+                    <h2>WEB DEVELOPMENT</h2>
+                    <img src="assets/side-by-side.png" alt="Icon" />
+                    <h2>APPS DESIGN</h2>
+                    <img src="assets/side-by-side.png" alt="Icon" />
+                    <h2>APP DEVELOPMENT</h2>
+                    <img src="assets/side-by-side.png" alt="Icon" />
+                    <h2>GRAPHIC DESIGN</h2>
+                    <img src="assets/side-by-side.png" alt="Icon" />
+                    <h2>BRAND IDENTITY</h2>
+                    <img src="assets/side-by-side.png" alt="Icon" />
                 </div>
             </div>
         </div>
